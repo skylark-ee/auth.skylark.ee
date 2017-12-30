@@ -1,0 +1,26 @@
+{
+  "name": "skylark-auth",
+  "version": "1.0.0",
+  "description": "Skylark SSO",
+  "main": "index.js",
+  "scripts": {
+    "generate-keys": "node -e \"console.log(JSON.stringify(require('keypair')()))\"",
+    "build": "mkdir -p data/build/js && rollup -o data/build/js/bundle.js -f iife -m inline src/js/index.js",
+    "serve": "npm run build && node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Flaki @ Skylark",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "fs-extra": "^5.0.0",
+    "isomorphic-fetch": "^2.2.1",
+    "nunjucks": "^3.0.1",
+    "ppc-messaging": "^2.0.0",
+    "twilio": "^3.11.0"
+  },
+  "devDependencies": {
+    "rollup": "^0.53.1"
+  }
+}

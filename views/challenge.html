@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+<h1>{{ title }}</h1>
+
+<form name="login" method="post">
+  <div class="username">
+    <label>Username:</label>
+    <h2>{{ username }}</h2>
+  </div>
+
+  <div class="challenge">
+    <label>Received SMS-key:</label>
+    <input type="text" name="key" maxlength="6" autofocus />
+  </div>
+
+  <button type="submit" name="login-otp" value="1">OK</button>
+
+</form>
+{% endblock %}

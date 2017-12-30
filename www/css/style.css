@@ -1,0 +1,142 @@
+/* fonts */
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/font/opensans-regular.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  src: url('/font/yanonekaffeesatz-extralight-regular.woff');
+  font-weight: 200;
+  font-style: normal;
+}
+
+
+/* color scheme */
+body {
+  background-color: #1DA1F2;
+  color: white;
+}
+
+a, a:visited, a:hover, a:focus {
+  color: #80ecff;
+}
+a:hover, a:focus {
+  outline: 1px dotted yellow;
+}
+
+
+/* page shape */
+html, body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+@media only screen and (max-width: 400px) {
+  body {
+    font-size: 5vmin;
+  }
+  form label {
+    font-size: 1em;
+  }
+}
+
+
+/* layout elements */
+h1, h2, h3 {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: 200;
+}
+
+h1 { font-size: 3em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.3em; }
+
+
+
+/* forms */
+main {
+  text-align: center
+}
+
+label {
+  text-transform: uppercase;
+  font-size: .75em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh;
+
+  align-items: center;
+  justify-content: center;
+}
+
+form > div {
+  margin-bottom: 1.5em;
+}
+form label {
+  display: block;
+  margin-bottom: .5em;
+}
+form input {
+  display: block;
+  background: linear-gradient(to bottom, #fff, #ddf);
+  border-radius: .5em;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1em;
+  padding: .5em 1em;
+  color: #777;
+  text-align: center;
+  letter-spacing: -.05em;
+  min-width: 15em;
+
+  border: none;
+  border-bottom: .1em solid #77f;
+  box-shadow: 0 .25em .25em #ccf inset;
+}
+
+form .challenge>input {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 4em;
+
+  letter-spacing: .15em;
+  text-indent: .1em;
+  min-width: 4em;
+  width: 4em;
+  padding: .25em;
+
+  color: #444;
+  text-shadow: 2px 0 2px #abf, -2px 0 2px white;
+  caret-color: #abf;
+}
+
+
+button {
+  margin: .5em;
+  background: #88f;
+  border: .15em solid #44c;
+  border-left-color: #ccf;
+  border-top-color: #ccf;
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  box-shadow: 0 0 1em #339 inset;
+
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-weight: bold;
+}
+
+button:hover, button:focus, button:active {
+  background: #aaf;
+  cursor: pointer;
+  border-right-color: #ccf;
+  border-bottom-color: #ccf;
+}

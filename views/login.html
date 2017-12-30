@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+<h1>{{ title }}</h1>
+
+<form name="login" method="post">
+
+  <div class="username">
+    <label>Username:</label>
+    <input type="email" name="username" autofocus required value="{{ default_user_id }}" />
+  </div>
+
+  <div class="other">
+    <label>Device name:</label>
+    <input type="text" name="skylark-notes-device" required />
+  </div>
+
+  <button type="submit" name="login-main" value="1">OK</button>
+
+</form>
+{% endblock %}
