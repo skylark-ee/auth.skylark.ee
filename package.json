@@ -4,23 +4,23 @@
   "description": "Skylark SSO",
   "main": "index.js",
   "scripts": {
-    "generate-keys": "node -e \"console.log(JSON.stringify(require('keypair')()))\"",
-    "build": "mkdir -p data/build/js && rollup -o data/build/js/bundle.js -f iife -m inline src/js/index.js",
+    "generate-keys": "node -e \"console.log('Please use the skylark-auth (npm i skylark-auth) to generate client configs!')\"",
+    "build": "mkdir -p data/build/js && npx rollup -o data/build/js/bundle.js -f iife -m inline src/js/index.js",
     "serve": "npm run build && node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Flaki @ Skylark",
   "license": "Apache-2.0",
   "dependencies": {
-    "cookie-parser": "^1.4.3",
-    "express": "^4.16.2",
-    "fs-extra": "^5.0.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "fs-extra": "^9.0.0",
     "isomorphic-fetch": "^2.2.1",
-    "nunjucks": "^3.0.1",
+    "nunjucks": "^3.2.1",
     "ppc-messaging": "^2.0.0",
-    "twilio": "^3.11.0"
+    "twilio": "^3.42.1"
   },
   "devDependencies": {
-    "rollup": "^0.53.1"
+    "rollup": "^2.3.4"
   }
 }
