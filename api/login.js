@@ -21,8 +21,12 @@ module.exports = {
 }
 
 function handler(req, res) {
-  let sess = sessions.load(req.query['k'])
-  let client = CFG.CLIENTS.filter(client => client.client_id === sess.request.client_id)[0]
+  let sess, client;
+  try {
+    sess = sessions.load(req.query['k'])
+    client = CFG.CLIENTS.filter(client => client.client_id === sess.request.client_id)[0]
+  }
+  catch(e) {}
 
   // Bad session
   if (!sess) {
